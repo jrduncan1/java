@@ -1,29 +1,29 @@
 import java.util.ArrayList;
-public class TestOrders {
+public class TestOrder {
     public static void main(String[] args) {
-        Items item1 = new Items();
+        Item item1 = new Item();
         item1.name = "mocha";
         item1.price = 3.47;
 
-        Items item2 = new Items();
+        Item item2 = new Item();
         item2.name = "latte";
         item2.price = 3.96;
         
-        Items item3 = new Items();
+        Item item3 = new Item();
         item3.name = "drip coffee";
         item3.price = 1.23;
 
-        Items item4 = new Items();
+        Item item4 = new Item();
         item4.name = "capuccino";
         item4.price = 4.77;
 
-        Orders order1 = new Orders();
+        Order order1 = new Order();
         order1.name = "Cindhuri";
 
         // Cindhuri's order is now ready. Update her status.
         order1.ready = true;
 
-        Orders order2 = new Orders();
+        Order order2 = new Order();
         order2.name = "Jimmy";
 
         // Add item1 to order2's item list and increment the order's total
@@ -34,7 +34,7 @@ public class TestOrders {
         order2.ready = true;
 
 
-        Orders order3 = new Orders();
+        Order order3 = new Order();
         order3.name = "Noah";
 
         // order3 ordered a cappucino. Add the cappucino to their order list and to their tab.
@@ -42,7 +42,7 @@ public class TestOrders {
         order3.total += item4.price;
 
 
-        Orders order4 = new Orders();
+        Order order4 = new Order();
         order4.name = "Sam";
 
         // order4 added a latte. Update accordingly.
