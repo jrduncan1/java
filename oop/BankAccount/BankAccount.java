@@ -17,9 +17,11 @@ public class BankAccount {
     public void depositMoney(String account, double amount) {
         if(account == "Checking") {
             setCheckingBalance(getCheckingBalance() + amount);
+            System.out.println("Deposited $" + amount + " into Checking." );
             this.totalBalance += amount;
         } else if(account == "Savings") {
             setSavingsBalance(getSavingsBalance() + amount);
+            System.out.println("Deposited $" + amount + " into Savings." );
             this.totalBalance += amount;
         } else {
             System.out.println("Invalid account.");
@@ -31,16 +33,18 @@ public class BankAccount {
         if(account == "Checking") {
             if(amount < checkingBalance) {
                 setCheckingBalance(getCheckingBalance() - amount);
+                System.out.println("Withdrew $" + amount + " from Checking." );
                 this.totalBalance -= amount;
             } else {
-                System.out.println("Insufficient funds.");
+                System.out.println("Insufficient funds. Withdrawl declined.");
             }
         } else if(account == "Savings") {
             if(amount < savingsBalance) {
                 setSavingsBalance(getSavingsBalance() - amount);
+                System.out.println("Withdrew $" + amount + " from Savings." );
                 this.totalBalance -= amount;
             } else {
-                System.out.println("Insufficient funds.");
+                System.out.println("Insufficient funds. Withdrawl declined.");
             }
         } else {
             System.out.println("Invalid account.");
