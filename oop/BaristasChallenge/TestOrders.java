@@ -2,11 +2,8 @@ import java.util.ArrayList;
 public class TestOrders {
     public static void main(String[] args) {
         Item item1 = new Item("mocha", 3.47);
-
         Item item2 = new Item("latte", 3.96);
-        
         Item item3 = new Item("drip coffee", 1.23);
-
         Item item4 = new Item("cappuccino", 4.77);
 
         // **Create 2 orders for unspecified guests**
