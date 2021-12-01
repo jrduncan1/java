@@ -1,60 +1,56 @@
 import java.util.ArrayList;
 public class TestOrders {
     public static void main(String[] args) {
-        Items item1 = new Items();
-        item1.name = "mocha";
-        item1.price = 3.47;
+        Item item1 = new Item("mocha", 3.47);
 
-        Items item2 = new Items();
-        item2.name = "latte";
-        item2.price = 3.96;
+        Item item2 = new Item("latte", 3.96);
         
-        Items item3 = new Items();
-        item3.name = "drip coffee";
-        item3.price = 1.23;
+        Item item3 = new Item("drip coffee", 1.23);
 
-        Items item4 = new Items();
-        item4.name = "capuccino";
-        item4.price = 4.77;
+        Item item4 = new Item("cappuccino", 4.77);
 
-        Orders order1 = new Orders();
-        order1.name = "Cindhuri";
+        // **Create 2 orders for unspecified guests**
+        Order order1 = new Order();
+        order1.addItem(item1);
+        order1.addItem(item1);
+        order1.addItem(item3);
+        order1.setOrderReady(false);
+        // System.out.println(order1.getOrderTotal());
+        System.out.println(order1.getStatusMessage());
+        order1.displayOrder();
 
-        // Cindhuri's order is now ready. Update her status.
-        order1.ready = true;
+        Order order2 = new Order();
+        order2.addItem(item2);
+        order2.addItem(item1);
+        order2.addItem(item3);
+        order2.addItem(item4);
+        order2.setOrderReady(true);
+        System.out.println(order2.getStatusMessage());
+        order2.displayOrder();
 
-        Orders order2 = new Orders();
-        order2.name = "Jimmy";
+        // **Create 3 orders using the overloaded constructor**
+        Order order3 = new Order("Jake");
+        order3.addItem(item4);
+        order3.addItem(item4);
+        order3.addItem(item1);
+        order3.setOrderReady(true);
+        System.out.println(order3.getStatusMessage());
+        order3.displayOrder();
 
-        // Add item1 to order2's item list and increment the order's total
-        order2.items.add(item1);
-        order2.total += item1.price;
+        Order order4 = new Order("Steve");
+        order4.addItem(item2);
+        order4.addItem(item1);
+        order4.addItem(item1);
+        order4.addItem(item3);
+        order4.setOrderReady(false);
+        System.out.println(order4.getStatusMessage());
+        order4.displayOrder();
 
-        // Jimmy's order is now ready. Update his status.
-        order2.ready = true;
-
-
-        Orders order3 = new Orders();
-        order3.name = "Noah";
-
-        // order3 ordered a cappucino. Add the cappucino to their order list and to their tab.
-        order3.items.add(item4);
-        order3.total += item4.price;
-
-
-        Orders order4 = new Orders();
-        order4.name = "Sam";
-
-        // order4 added a latte. Update accordingly.
-        order4.items.add(item2);
-
-        // Sam ordered more drinks - 2 lattes. Update their order as well.
-        order4.items.add(item2);
-        order4.items.add(item2);
-        order4.total += (item2.price * 3);
-
-        System.out.println("Order 2 Total: $" + order2.total);
-        System.out.println("Order 3 Total: $" + order3.total);
-        System.out.println("Order 4 Total: $" + order4.total);
+        Order order5 = new Order("Bobby");
+        order5.addItem(item4);
+        order5.addItem(item1);
+        order5.setOrderReady(true);
+        System.out.println(order5.getStatusMessage());
+        order5.displayOrder();
     }
 }
