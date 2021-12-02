@@ -27,11 +27,11 @@ public class CafeUtil {
 
     public void addCustomer(ArrayList<String> customers) {
         ArrayList<String> customer = customers;
-        System.out.println("Please enter your name:");
-        String userName = System.console().readLine();
-        System.out.printf("Hello, %s!", userName);
-        System.out.printf("    There are %s people in front of you.", customer.size());
-        customers.add(userName);
-        System.out.println(customer);
+        System.out.println("Please enter your name:"); // 1
+        String userName = System.console().readLine(); // 2
+        System.out.printf("Hello, %s!", userName); // 3
+        System.out.printf("    There are %s people in front of you.", customer.size()); // 4
+        customers.add(userName); // 5
+        System.out.println(customer); // 5
     }
 }
