@@ -47,3 +47,14 @@ notes/w1d2.md
 .metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.e4.ui.workbench.renderers.swt.prefs
 .metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
 STS_to_Git.md
+springProjects/firstproject/mvnw
+springProjects/firstproject/mvnw.cmd
+springProjects/firstproject/pom.xml
+springProjects/firstproject/.mvn/wrapper/maven-wrapper.jar
+springProjects/firstproject/.mvn/wrapper/maven-wrapper.properties
+springProjects/firstproject/.mvn/wrapper/MavenWrapperDownloader.java
+springProjects/firstproject/src/main/java/com/jduncan/firstproject/FirstprojectApplication.java
+springProjects/firstproject/src/main/java/com/jduncan/firstproject/ServletInitializer.java
+springProjects/firstproject/src/main/resources/application.properties
+springProjects/firstproject/src/test/java/com/jduncan/firstproject/FirstprojectApplicationTests.java
+springProjects/firstproject/.mvn/wrapper/maven-wrapper.jar
