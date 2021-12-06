@@ -9,7 +9,7 @@ class Stack{
         //add an item at the top
     }
 
-    pop(item){
+    pop(){
         var popped = this.items.pop();
         return popped;
         //remove the top/last item from the stack 
